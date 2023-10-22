@@ -1,0 +1,84 @@
+.header-deck{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 38px;
+    padding: 10px 20px;
+    background-color: #d0cacc4d;
+    border-bottom:0.1px solid #3a3a3a;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+}
+
+.img-deck {
+    width: 24px;
+    height: 22px;
+}
+
+.img-cards {
+    width: 48px;
+    height: 42px;
+}
+
+.deck-item {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os elementos filhos, que incluem as imagens */
+    padding: 10px;
+    gap: 10px;
+}
+
+
+.conteudo {
+    display: inline-block;
+    justify-content: center;
+    flex-direction: column;
+    border:0.1px solid #d0cacc;
+    background-color: #3a3a3a49;
+    border-radius: 6px;
+}
+
+.filosofia, .memoria, .soberania {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Define 8 colunas de largura igual */
+    grid-template-rows: repeat(3, 1fr); /* Define 3 linhas de altura igual */
+    gap: 4px; /* Espaçamento entre as cartas */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-bottom: 20px;
+
+}
+
+.card {
+    width: 143px; /* Largura da carta */
+    height: 200px;
+    border-radius: 2px;  
+    
+    cursor: pointer;
+    background-size: cover; /* Ajusta a imagem para cobrir todo o espaço da carta */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    color: #FFF;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: #5e5656;
+    
+}
+
+.header h3 {
+    border-bottom:2px solid #CCC;
+    text-align:center;
+}
+
+.logo {
+    background-color: #5e5656e1;
+    border-radius: 10px;
+    width: 28px;
+    height: 28px;
+}
