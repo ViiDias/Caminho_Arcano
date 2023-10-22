@@ -8,11 +8,11 @@ function navigateTo(page) {
 const navItems = document.querySelectorAll('.nav-item');
 navItems.forEach((item) => {
     const text = item.innerText;
-    if (text === 'Página Inicial' && currentPage === '/index.html') {
+    if (text === 'Página Inicial' && currentPage === './index.html') {
         item.classList.add('active');
-    } else if (text === 'Cartas' && currentPage === '/cards.html') {
+    } else if (text === 'Cartas' && currentPage === './cards.html') {
         item.classList.add('active');
-    } else if (text === 'Monte Seu Deck' && currentPage === '/deck.html') {
+    } else if (text === 'Monte Seu Deck' && currentPage === './deck.html') {
         item.classList.add('active');
     }
 });
