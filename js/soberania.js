@@ -11,7 +11,7 @@ async function loadFilosofiaCards() {
         cardHTML.classList.add('card'); // Adiciona a classe .carta
     
         // Construa o caminho da imagem com base no ID da carta
-        const imagePath = `../img/cards/card_${cardData.ID}.jpeg`;
+        const imagePath = `./img/cards/card_${cardData.ID}.jpeg`;
         console.log(imagePath)
         cardHTML.style.backgroundImage = `url(${imagePath})`;
 
