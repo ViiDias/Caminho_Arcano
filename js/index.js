@@ -1,12 +1,12 @@
 // Mapeamento dos nomes dos caminhos para imagens
 const caminhoToImage = {
-    "A Inexistência": "../img/caminhos/nihility.png",
-    "A Preservação": "../img/caminhos/preservation.png",
-    "A Caça": "../img/caminhos/hunt.png",
-    "A Erudição": "../img/caminhos/erudition.png",
-    "A Destruição": "../img/caminhos/destruction.png",
-    "A Abundância": "../img/caminhos/abundance.png",
-    "A Harmonia": "../img/caminhos/harmony.png"
+    "A Inexistência": "./img/caminhos/nihility.png",
+    "A Preservação": "./img/caminhos/preservation.png",
+    "A Caça": "./img/caminhos/hunt.png",
+    "A Erudição": "./img/caminhos/erudition.png",
+    "A Destruição": "./img/caminhos/destruction.png",
+    "A Abundância": "./img/caminhos/abundance.png",
+    "A Harmonia": "./img/caminhos/harmony.png"
 };
 
 async function loadCards(tipo, containerClass, dataFile) {
