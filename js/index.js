@@ -10,7 +10,7 @@ const caminhoToImage = {
 };
 
 async function loadCards(tipo, containerClass, dataFile) {
-    const response = await fetch(`../data/${dataFile}`);
+    const response = await fetch(`./data/${dataFile}`);
     const text = await response.text();
     const cardsData = jsyaml.load(text);
   
