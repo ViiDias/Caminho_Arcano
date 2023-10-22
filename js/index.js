@@ -21,7 +21,7 @@ async function loadCards(tipo, containerClass, dataFile) {
         cardHTML.classList.add('card');
   
         // Construa o caminho da imagem com base no ID da carta
-        const imagePath = `../img/cards/card_${cardData.ID}.jpeg`;
+        const imagePath = `./img/cards/card_${cardData.ID}.jpeg`;
         cardHTML.style.backgroundImage = `url(${imagePath})`;
 
         // Construa o caminho da imagem com base no ID da carta
