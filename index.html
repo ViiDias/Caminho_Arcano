@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./img/favicon/card.png" type="image/x-icon">
+    <title>Caminho Arcano</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-list">
+            <div class="nav-item" onclick="navigateTo('index.html')">Página Inicial</div>
+            <div class="nav-item" onclick="navigateTo('deck.html')">Monte Seu Deck</div>
+            <div class="nav-item" onclick="navigateTo('cards.html')">Cartas</div>
+        </div>
+    </div>
+    
+    <div class="conteudo">
+        <div class="inform">
+            <h2>Baralho</h2>
+            <p>
+                Todos os jogadores possuem um baralho de cartas. Esse baralho contém 20 
+                Cartas, sendo que ele deve conter: 12 Cartas de Filosofia, 6 Cartas de Memória 
+                e 2 Cartas de Soberania. Cartas de Filosofia: representam um conceito ou ideia 
+                vaga, ampla ou misteriosa, e têm funcionamento mais simples; Cartas de 
+                Memória: representam um momento, uma memória, e são mais complexas e 
+                interativas; Cartas de Soberania: representam uma vontade, uma ambição, e 
+                possuem um efeito adicional atrelado a elas.
+                Em um baralho, é possível ter até 2 Cartas de Filosofia ou de Memória iguais, 
+                mas todas as Cartas de Soberania devem ser diferentes entre si. A cada Carta 
+                de um baralho, é atribuído um valor numérico de 1 a 20. Com base nesse valor, 
+                é escolhida uma Carta aleatória sempre que um jogador pegar do baralho.</p>
+        </div>
+
+        <div class="inform">
+            <h2>Tipos de Cartas</h2>
+            <p>
+                As Cartas se dividem em 2 tipos: Cartas de Ação e Cartas de Suporte. As 
+                Cartas de Suporte são Cartas que permanecem em campo após serem 
+                lançadas, até serem destruídas. Enquanto em campo, essas Cartas de Suporte 
+                são consideradas ativas. Apenas 2 Cartas de Suporte podem permanecer ativas 
+                simultaneamente.
+                Já as Cartas de Ação são Cartas que são lançadas e imediatamente 
+                destruídas após surtir seus efeitos, visto que seus efeitos são, num geral, 
+                também imediatos. Todas as Cartas de Ação requerem algum gasto de Pontos 
+                de Perícia para serem ativadas.</p>
+        </div>
+
+        <div class="inform">
+            <h2>Pontos de Perícia</h2>
+            <p>
+                Pontos de Perícia são uma quantia de pontos acumulada durante um jogo. 
+                Pontos de Perícia acumulam até 5 vezes, e podem ser usadas das seguintes 
+                formas:
+                -Ação: Você consumir Pontos de Perícia para lançar Cartas de Ação.
+                -Atacar: Você pode consumir 1 Ponto de Perícia para lançar um Ataque
+                contra seu adversário, causando 1 de Dano. Você não precisa gastar uma Carta 
+                de Ação para fazer isso.
+                -Substituir: Você pode consumir 1 Ponto de Perícia para, ao declarar lançar 
+                uma Carta de Suporte, destruir uma de suas Cartas de Suporte ativas e fazer a 
+                nova Carta de Suporte ser jogada no lugar da antiga.
+                -Trocar: Você pode consumir 1 Ponto de Perícia para devolver uma Carta de 
+                sua mão ao baralho e pegar nova 1 Carta do baralho, essencialmente trocando-as.
+            </p>
+        </div>
+
+        <div class="inform">
+            <h2>Termos e Regras Gerais</h2>
+            <p>
+                Destruição: Cartas destruídas vão para um monte de cartas separado, 
+                chamado Jardim da Recordação. Uma vez lá, essas Cartas não podem ser 
+                recuperadas a não ser que através de um efeito que especificamente as faça 
+                retornar.
+                Ataque: Para um Ataque ser bem-sucedido, ele deve causar Dano. Caso o 
+                Ataque tenha seu Dano reduzido a 0, ele é considerado malsucedido e quaisquer 
+                outros efeitos que seriam atrelados a ele não ocorrem.
+                Mão: Todas as Cartas em sua posse, que não estão nem destruídas (no 
+                Jardim da Recordação), nem no baralho, nem ativas.
+                Caminho: Cada Carta está atrelada a um Caminho. Cartas podem ter 
+                interações umas com as outras a depender de seus Caminhos.
+                Vida: Todo jogador começa um Duelo com 20 de Vida. Dano e Cura podem 
+                alterar o valor de Vida atual, mas o máximo de Vida permanece em 20 a não ser 
+                que seja alterado por outras fontes. O jogador que chegar a 0 de Vida perde um 
+                Duelo, declarando seu oponente como o vencedor.
+                Dano: Para cada ponto de Dano que vier a afetar um jogador, ele perde um 
+                ponto de Vida.
+                Cura: para cada ponto de Cura que vier a afetar um jogador, ele recupera um 
+                ponto de Vida.
+                Turno: Período que um jogador é permitido lançar suas Cartas. Ao declarar 
+                fim de seu Turno, o outro jogador toma seu próprio Turno.</p>
+        </div>
+
+        <div class="inform">
+            <h2>Duelo</h2>
+            <p>
+                Ao início de um Duelo, os jogadores pegam 4 Cartas de seus baralhos. Cada 
+                jogador começa com 20 de Vida e 2 Pontos de Perícia. Ao fim de cada turno, um 
+                jogador recupera 1 Ponto de Perícia e pega 1 Carta de seu baralho. Se um 
+                jogador não tiver jogado qualquer Carta de Ação nesse turno nem tiver realizado 
+                Ataque algum, bem-sucedido ou não, ele recupera 2 Pontos de Perícia ao fim de 
+                seu turno, ao invés de apenas 1.
+                O objetivo de um jogador durante um Duelo é levar seu oponente a 0 de Vida. 
+                Se o fizer, esse jogador vence o Duelo, e o que chegar a 0 de Vida é o perdedor.</p>
+        </div>
+
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/soberania.js"></script>
+    <script src="./js/navbar.js"></script>
+</body>
+</html>

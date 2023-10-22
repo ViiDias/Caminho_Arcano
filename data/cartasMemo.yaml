@@ -1,0 +1,250 @@
+- ID: "021"
+  Nome: A Determinação Brilha Como Gotas de Suor
+  Tipo: Carta de Ação
+  Caminho: A Inexistência
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar um Ataque, causando 2 de Dano. Se sofrer esse Ataque, o oponente perde 1 Ponto de Perícia.
+
+- ID: "022"
+  Nome: A Escolha dos Landau
+  Tipo: Carta de Suporte
+  Caminho: A Preservação
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, reduz todos os Danos contra você em 1, até o mínimo de 0.
+
+- ID: "023"
+  Nome: Ainda nos Veremos de Novo
+  Tipo: Carta de Suporte
+  Caminho: A Inexistência
+  Habilidade: |
+    Escolha uma Carta de Suporte ativa de seu oponente. Ela não pode ser destruída enquanto essa Carta também estiver ativa. Se essa Carta for destruída, a Carta de Suporte escolhida de seu oponente também é destruída.
+
+- ID: "024"
+  Nome: Antes do Início da Missão do Tutorial
+  Tipo: Carta de Ação
+  Caminho: A Inexistência
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar um Ataque, causando 1 de Dano. Se o oponente possuir espaços de Carta de Suporte vazios quando sofrer esse Ataque, ele não pode preenche-los até o final do seu próximo turno.
+
+- ID: "025"
+  Nome: Apenas o Silêncio Sobrou
+  Tipo: Carta de Suporte
+  Caminho: A Caça
+  Habilidade: |
+    Sempre que você terminar um turno sem lançar uma Carta de Ação e/ou tendo um espaço de Carta de Suporte vazio enquanto essa Carta está ativa, recupere 1 Ponto de Perícia adicional.
+
+- ID: "026"
+  Nome: A Solenidade do Café da Manhã
+  Tipo: Carta de Suporte
+  Caminho: A Erudição
+  Habilidade: |
+    Enquanto estiver ativa, aumenta o Dano do seu próximo Ataque em um valor igual ao número de Cartas de Suporte de seu adversário que foram destruídas por você nesse jogo, até o máximo de 3. Após surtir efeito, essa Carta é destruída.
+
+- ID: "027"
+  Nome: As Toupeiras Te Dão Boas-vindas
+  Tipo: Carta de Ação
+  Caminho: A Destruição
+  Habilidade: |
+    Consome 2 Pontos de Perícia para lançar um Ataque, causando Dano igual ao número de Ataques lançados por você nesse jogo, até o máximo de 6.
+
+- ID: "028"
+  Nome: Au! Hora de Passear!
+  Tipo: Carta de Suporte
+  Caminho: A Destruição
+  Habilidade: |
+    Após lançar essa Carta, ela imediatamente volta para o baralho. Se você pegar essa Carta novamente durante esse jogo, pegue 2 Cartas adicionais do baralho e destrua 1 Carta de Suporte de seu adversário.
+
+- ID: "029"
+  Nome: Boa Noite e Durma Bem
+  Tipo: Carta de Ação
+  Caminho: A Inexistência
+  Habilidade: |
+    Consome 1 Ponto de Perícia para reduzir os Pontos de Perícia de seu oponente em 2. Se os Pontos de Perícia de seu adversário chegarem a 0, destrua 1 Carta de Suporte dele.
+
+- ID: "030"
+  Nome: Conversa Pós-Operatória
+  Tipo: Carta de Suporte
+  Caminho: A Abundância
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, qualquer Cura que você receba é aumentada em 1.
+
+- ID: "031"
+  Nome: Dance! Dance! Dance!
+  Tipo: Carta de Suporte
+  Caminho: A Harmonia
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, substituir Cartas de Suporte ativas não gasta Pontos de Perícia, inclusive ao substituir essa Carta.
+
+- ID: "032"
+  Nome: Encontro Planetário
+  Tipo: Carta de Suporte
+  Caminho: A Harmonia
+  Habilidade: |
+    Ao lançar essa Carta, escolha um Caminho. Você recupera 1 Ponto de Perícia sempre que lançar uma Carta do Caminho escolhido. Essa Carta é destruída após surtir efeito 3 vezes.
+
+- ID: "033"
+  Nome: Esculpindo a Lua, Tecendo as Nuvens
+  Tipo: Carta de Ação
+  Caminho: A Harmonia
+  Habilidade: |
+    Consome 1 Ponto de Perícia para fazer alguma condição de uma Carta de Suporte ativa aleatória ser momentaneamente considerada como cumprida. A Carta de Suporte, então, surte efeito da forma que for possível. Se a Carta de Suporte não puder ser afetada por essa Carta, ela não é considerada na escolha aleatória.
+
+- ID: "034"
+  Nome: Essa Sou Eu!
+  Tipo: Carta de Suporte
+  Caminho: A Preservação
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, seu oponente não pode reduzir seus Pontos de Perícia.
+
+- ID: "035"
+  Nome: Faça o Mundo Clamar
+  Tipo: Carta de Suporte
+  Caminho: A Erudição
+  Habilidade: |
+    No início de cada um dos seus turnos enquanto essa Carta estiver ativa, recupera 1 Ponto de Perícia.
+
+- ID: "036"
+  Nome: Fermata
+  Tipo: Carta de Suporte
+  Caminho: A Inexistência
+  Habilidade: |
+    Sempre que você destruir uma Carta de Suporte do seu adversário enquanto essa Carta estiver ativa, ele sofrerá 1 de Dano.
+
+- ID: "037"
+  Nome: Hoje é Mais um Dia de Paz
+  Tipo: Carta de Ação
+  Caminho: A Erudição
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar um Ataque, causando Dano igual a metade do número de Cartas na sua mão, arredondando para cima, até o máximo de 5.
+
+- ID: "038"
+  Nome: Inscreva-se Para Mais!
+  Tipo: Carta de Ação
+  Caminho: A Caça
+  Habilidade: |
+    Consome 1 Ponto de Perícia para pegar 1 Carta do baralho e lançar um Ataque, causando 1 de Dano. Se o oponente sofrer o Ataque, ele pode escolher também pegar 1 Carta do baralho, mas se o fizer, você pode pegar 1 Carta adicional do seu baralho.
+
+- ID: "039"
+  Nome: Jogo de Espadas
+  Tipo: Carta de Suporte
+  Caminho: A Caça
+  Habilidade: |
+    Quando você lançar um Ataque, essa Carta ganha 1 Carga. Enquanto ela possuir Cargas, todos os Ataques que você realizar têm seu Dano aumentado em 1. Essa Carta perde todas as Cargas no início de seu turno ou se você lançar uma Carta que não lance um Ataque.
+
+- ID: "040"
+  Nome: Memórias do Passado
+  Tipo: Carta de Ação
+  Caminho: A Harmonia
+  Habilidade: |
+      Consome 1 Ponto de Perícia para fazer todas as Cartas que já tenham sido destruídas em algum momento nesse jogo voltarem ao baralho, tanto as Cartas de Suporte ativas quanto as Cartas presentes nas mãos dos jogadores.
+
+- ID: "041"
+  Nome: Meu Próprio Nascimento
+  Tipo: Carta de Suporte
+  Caminho: A Erudição
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, quaisquer Cartas lançadas por você que já tenham sido lançadas em algum momento desse jogo: não podem ser destruídas por 1 turno, caso sejam Cartas de Suporte; consomem 1 Ponto de Perícia a menos ao ser lançadas, caso sejam Cartas de Ação. Uma Carta só pode se beneficiar de Meu Próprio Nascimento uma vez por jogo.
+
+- ID: "042"
+  Nome: Momento Perfeito
+  Tipo: Carta de Ação
+  Caminho: A Abundância
+  Habilidade: |
+    Consome 1 Ponto de Perícia para receber 1 de Cura e, até o final do seu próximo turno, receberá 1 de Cura sempre que sofrer um Ataque.
+
+- ID: "043"
+  Nome: O Calor Encurta as Noites Geladas
+  Tipo: Carta de Suporte
+  Caminho: A Abundância
+  Habilidade: |
+    Ao ser lançada, essa Carta recebe um número de Cargas igual ao número de Cartas que você possui em sua mão. Ao ser destruída por qualquer fonte, reduz a Vida máxima de ambos os jogadores em um valor igual ao número de Cargas, e os Cura em 1.
+
+- ID: "044"
+  Nome: Olhos da Presa
+  Tipo: Carta de Suporte
+  Caminho: A Inexistência
+  Habilidade: |
+    Caso alguma Carta de Suporte de Inexistência seja destruída pelo seu oponente, incluindo essa, enquanto essa Carta estiver ativa, destrói 1 Carta de Ação aleatória da mão do seu oponente e você pode imediatamente lançar 1 Carta de Ação como se estivesse em seu turno. Pode ocorrer apenas 1 vez por turno.
+
+- ID: "045"
+  Nome: O Rio Corre na Primavera
+  Tipo: Carta de Ação
+  Caminho: A Caça
+  Habilidade: |
+    Consome 2 Pontos de Perícia para lançar um Ataque, causando 4 de Dano. Se você não sofreu de um Ataque desde o início de seu turno anterior, consome 1 Ponto de Perícia a menos.
+
+- ID: "046"
+  Nome: Passado e Futuro
+  Tipo: Carta de Ação
+  Caminho: A Harmonia
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar uma Carta de Suporte. Até o início do seu próximo turno, enquanto a Carta de Suporte lançada estiver ativa, é considerado como se duas delas estivessem ativas simultaneamente.
+
+- ID: "047"
+  Nome: Primeiro Dia da Minha Vida Nova
+  Tipo: Carta de Suporte
+  Caminho: A Preservação
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, suas Cartas de Soberania não podem ser destruídas. Enquanto houver alguma Carta de Soberania de Suporte ativa, reduz todos os Danos sofridos por você em 1, até o mínimo de 1, enquanto essa Carta estiver ativa.
+
+- ID: "048"
+  Nome: Repouso dos Gênios
+  Tipo: Carta de Suporte
+  Caminho: A Erudição
+  Habilidade: |
+    Sempre que você começar um turno, enquanto essa Carta estiver ativa, sem que quaisquer de suas Cartas de Suporte tenham sido destruídas desde o início de seu turno passado, você pode pegar 1 Carta do baralho.
+
+- ID: "049"
+  Nome: Retorno à Escuridão
+  Tipo: Carta de Ação
+  Caminho: A Caça
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar um Ataque, causando 3 de Dano. Se esse Ataque causar 4 ou mais de Dano, destrua 1 Carta de Suporte do seu adversário.
+
+- ID: "050"
+  Nome: Quid Pro Quo
+  Tipo: Carta de Ação
+  Caminho: A Abundância
+  Habilidade: |
+    Consome 2 Pontos de Perícia para receber Cura igual ao número de Caminhos já lançados por você durante esse jogo.
+
+- ID: "051"
+  Nome: Sem Escapatória
+  Tipo: Carta de Suporte
+  Caminho: A Destruição
+  Habilidade: |
+    Quando for lançada, essa Carta desativa todas as Cartas de Suporte ativas do adversário enquanto ela permanecer ativa. Novas Cartas de Suporte lançadas por seu oponente não sofrem dos efeitos dessa Carta.
+
+- ID: "052"
+  Nome: Sentimento Compartilhado
+  Tipo: Carta de Suporte
+  Caminho: A Abundância
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, sempre que seu oponente recuperar Pontos de Perícia através de Cartas, você recupera a mesma quantia.
+
+- ID: "053"
+  Nome: Sob o Céu Azul
+  Tipo: Carta de Ação
+  Caminho: A Destruição
+  Habilidade: |
+    Consome 1 Ponto de Perícia para destruir 2 Cartas aleatórias da mão de cada um dos jogadores. Você pode pegar 2 Cartas do baralho assim que tiver suas Cartas destruídas.
+
+- ID: "054"
+  Nome: Somos Fogo Vivo
+  Tipo: Carta de Suporte
+  Caminho: A Preservação
+  Habilidade: |
+    Sempre que uma Carta de Suporte for destruída pelo seu adversário enquanto essa Carta está ativa, recebe 1 de Cura. Se essa Carta for destruída, recebe 1 de Cura adicional.
+
+- ID: "055"
+  Nome: Tendência do Mercado Universal
+  Tipo: Carta de Suporte
+  Caminho: A Preservação
+  Habilidade: |
+    Sempre que sofrer um Ataque enquanto essa Carta estiver ativa, seu oponente sofrerá 1 de Dano.
+- ID: "056"
+  Nome: Um Voto Secreto
+  Tipo: Carta de Ação
+  Caminho: A Destruição
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar um Ataque, sofrendo 1 de Dano e causando 3 de Dano. Se a Vida do inimigo for superior à sua no momento em que a Carta foi lançada, causa 2 de Dano adicional.

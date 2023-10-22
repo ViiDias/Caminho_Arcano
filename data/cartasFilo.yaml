@@ -1,0 +1,146 @@
+- ID: "000"
+  Nome: Âmbar
+  Tipo: Carta de Suporte
+  Caminho: A Preservação
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, reduz todos os Danos sofridos em 1, até o mínimo de 1. Se sua Vida for igual ou inferior a metade do máximo, reduz o Dano em 1 adicional, até o mínimo de 0. Essa Carta é destruída após reduzir Dano uma vez.
+
+- ID: "001"
+  Nome: Antagonista
+  Tipo: Carta de Suporte
+  Caminho: A Caça
+  Habilidade: |
+    Quando uma Carta de Suporte ativa de seu oponente for destruída, recupera 1 Ponto de Perícia e essa Carta é destruída.
+
+- ID: "002"
+  Nome: Banco de Dados
+  Tipo: Carta de Ação
+  Caminho: A Erudição
+  Habilidade: |
+    Consome 1 Ponto de Perícia para forçar o oponente a revelar 2 Cartas aleatórias de sua mão.
+
+- ID: "003"
+  Nome: Casa Destruída
+  Tipo: Carta de Suporte
+  Caminho: A Destruição
+  Habilidade: |
+    Quaisquer jogadores cuja Vida for igual ou inferior a metade do máximo sofrem 1 de Dano a mais quando sofrem Dano. Cada jogador pode ser afetado por essa Carta apenas uma vez por turno. Essa Carta é destruída no início do seu próximo turno.
+
+- ID: "004"
+  Nome: Céu Colapsado
+  Tipo: Carta de Ação
+  Caminho: A Destruição
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar um Ataque, causando 2 de Dano.
+
+- ID: "005"
+  Nome: Chave Mestra
+  Tipo: Carta de Suporte
+  Caminho: A Erudição
+  Habilidade: |
+    Ao ser lançada, você pode imediatamente pegar 2 Cartas do baralho. Essa Carta é destruída no início do seu próximo turno.
+
+- ID: "006"
+  Nome: Cornucópia
+  Tipo: Carta de Suporte
+  Caminho: A Abundância
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, aumenta a Cura realizada em 1. Essa Carta é destruída após surtir efeito 2 vezes.
+
+- ID: "007"
+  Nome: Defesa
+  Tipo: Carta de Suporte
+  Caminho: A Preservação
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, reduz todos os Danos sofridos em 1, até o mínimo de 1. Essa Carta é destruída no início do seu próximo turno. Se ela não reduzir Dano algum durante seu período de ativação, você recupera 1 Ponto de Perícia quando ela for destruída.
+
+- ID: "008"
+  Nome: Flechas
+  Tipo: Carta de Ação
+  Caminho: A Caça
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar um Ataque, causando 1 de Dano. Se já tiver realizado um Ataque através de uma Carta de Caça esse turno, não consome o Ponto de Perícia.
+
+- ID: "009"
+  Nome: Flecha Veloz
+  Tipo: Carta de Ação
+  Caminho: A Caça
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar um Ataque, causando 2 de Dano.
+
+- ID: "010"
+  Nome: Fruta Delicada
+  Tipo: Carta de Ação
+  Caminho: A Abundância
+  Habilidade: |
+    Consome 1 Ponto de Perícia para receber 2 de Cura.
+
+- ID: "011"
+  Nome: Loop
+  Tipo: Carta de Suporte
+  Caminho: A Inexistência
+  Habilidade: |
+    Quando uma Carta de Suporte ativa de seu oponente for destruída, incluindo essa própria, ela apenas volta para sua mão. Após surtir efeito, essa Carta é destruída e volta à sua mão. Porém, se o efeito dessa Carta for desencadeado por você, Loop não volta à sua mão ao se autodestruir.
+
+- ID: "012"
+  Nome: Mediação
+  Tipo: Carta de Suporte
+  Caminho: A Harmonia
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, a próxima Carta de Suporte a ser destruída precisa ser essa. Essa obrigação é válida para ambos os jogadores.
+
+- ID: "013"
+  Nome: Morte Mútua
+  Tipo: Carta de Ação
+  Caminho: A Destruição
+  Habilidade: |
+    Consome 1 Ponto de Perícia para destruir 1 Carta de Suporte sua e 1 Carta de Suporte do seu oponente.
+
+- ID: "014"
+  Nome: Multiplicação
+  Tipo: Carta de Ação
+  Caminho: A Abundância
+  Habilidade: |
+    Consome 1 Ponto de Perícia para recuperar a sua última Carta de Suporte destruída.
+
+- ID: "015"
+  Nome: Pioneirismo
+  Tipo: Carta de Ação
+  Caminho: A Preservação
+  Habilidade: |
+    Consome 1 Ponto de Perícia para, no início do seu próximo turno, recuperar 2 Pontos de Perícia. Essa Carta pode surtir efeito apenas uma vez por turno.
+
+- ID: "016"
+  Nome: Rede de Engrenagens
+  Tipo: Carta de Suporte
+  Caminho: A Harmonia
+  Habilidade: |
+    Quando seu oponente consumir Pontos de Perícia enquanto essa Carta estiver ativa, você recupera a mesma quantidade de Pontos de Perícia, até o máximo de 2. Quando você recuperar 2 Pontos de Perícia através dessa Carta, ela é destruída.
+
+- ID: "017"
+  Nome: Refrão
+  Tipo: Carta de Ação
+  Caminho: A Harmonia
+  Habilidade: |
+    Consome 1 Ponto de Perícia para pegar 2 Cartas do baralho.
+
+- ID: "018"
+  Nome: Sagacidade
+  Tipo: Carta de Suporte
+  Caminho: A Erudição
+  Habilidade: |
+    Se o seu oponente lançar uma Carta de Suporte enquanto essa Carta estiver ativa, você pode pegar 1 Carta do baralho. Se ele lançar uma Carta de Ação, ao invés, você recupera 1 Ponto de Perícia. Essa Carta é destruída após surtir efeito.
+
+- ID: "019"
+  Nome: Sombra Oculta
+  Tipo: Carta de Ação
+  Caminho: A Inexistência
+  Habilidade: |
+    Consome 1 Ponto de Perícia para lançar um Ataque, causando Dano igual ao número de Cartas de Suporte do seu adversário destruídas por ele próprio em seu turno passado, até o máximo de 4.
+
+- ID: "020"
+  Nome: Vazio
+  Tipo: Carta de Suporte
+  Caminho: A Inexistência
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, você pode ter até 3 Cartas de Suporte ativas simultaneamente.

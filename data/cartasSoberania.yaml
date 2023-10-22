@@ -1,0 +1,192 @@
+- ID: "057"
+  Nome: Algo Insubstituível
+  Tipo: Carta de Suporte
+  Caminho: A Destruição
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, você causa 1 de Dano ao seu oponente
+    e recebe 1 de Cura sempre que sofrer um Ataque ou que tiver uma de suas Cartas de Suporte ativas destruídas (incluindo essa).
+  Soberania: |
+    Essa Carta não pode ser destruída por você.
+    Destruir outras Cartas para lançar uma Carta de Suporte não custa Pontos de Perícia enquanto essa Carta estiver ativa.
+
+- ID: "058"
+  Nome: Antes do Amanhecer
+  Tipo: Carta de Ação
+  Caminho: A Erudição
+  Habilidade: |
+    Consome 1 Ponto de Perícia para fazer seu oponente devolver 3 Cartas de sua mão ao baralho, à sua escolha.
+    Ele também pode escolher se recusar a devolver qualquer quantia dessas Cartas, mas sofrerá 2 de Dano por Carta recusada.
+  Soberania: |
+    Após ser lançada, o seu adversário deve gastar 2 Pontos de Perícia na próxima vez que desejar pegar uma carta do baralho, sendo impedido de fazê-lo se não os gastar.
+
+- ID: "059"
+  Nome: Chuva Constante
+  Tipo: Carta de Suporte
+  Caminho: A Inexistência
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, reduz a Cura do inimigo em um valor igual ao número de Cartas de Suporte de Inexistência ativas, até o mínimo de 0.
+  Soberania: |
+    O oponente não pode reduzir Dano sofrido enquanto essa Carta estiver em campo.
+
+- ID: "060"
+  Nome: Cura Solitária
+  Tipo: Carta de Suporte
+  Caminho: A Inexistência
+  Habilidade: |
+    Sempre que seu oponente iniciar um turno sem Cartas de Suporte ativas, você recebe 1 de Cura e essa Carta recebe 1 Carga.
+  Soberania: |
+    Se essa Carta for destruída enquanto é a sua única Carta de Suporte ativa, você recebe 3 de Cura por Carga que essa Carta possuía.
+
+- ID: "061"
+  Nome: Ecos do Caixão
+  Tipo: Carta de Suporte
+  Caminho: A Abundância
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, recebe 1 de Cura após cada Ataque realizado com sucesso.
+  Soberania: |
+    Essa Carta é destruída quando você atingir 4 ou menos de Vida. Quando essa Carta é destruída, você recebe 3 de Cura.
+
+- ID: "062"
+  Nome: Ela Já Fechou Seus Olhos
+  Tipo: Carta de Ação
+  Caminho: A Preservação
+  Habilidade: |
+    Consome 1 Ponto de Perícia para zerar todas as Cargas de todas as Cartas de Suporte ativas no momento. Para cada 2 Cargas consumidas, reduz todo Dano sofrido por você em 1 até o final do seu próximo turno, ao mínimo de 0.
+  Soberania: |
+    Até o final do seu próximo turno, todas as Cartas pegas do baralho por ambos os jogadores devem permanecer viradas para baixo, secretas a todos, a não ser que eles desejem jogá-las às cegas.
+
+- ID: "063"
+  Nome: Em Nome do Mundo
+  Tipo: Carta de Ação
+  Caminho: A Inexistência
+  Habilidade: |
+    Consome 2 Pontos de Perícia para lançar um Ataque, causando Dano igual a duas vezes o seu número de Cartas de Suporte ativas. Se o adversário sofrer o Ataque, terá um número de Cartas de Suporte destruídas igual ao seu número de Cartas de Suporte ativas.
+  Soberania: |
+    Ao ser lançada, você pode pegar um número de Cartas no baralho igual ao número de Cartas de Suporte de Inexistência ativas dentre ambos os jogadores.
+
+- ID: "064"
+  Nome: Eu Serei Minha Própria Espada
+  Tipo: Carta de Suporte
+  Caminho: A Destruição
+  Habilidade: |
+    Sempre que você sofrer um Ataque ou tiver uma de suas Cartas de Suporte destruídas, essa Carta recebe 1 Carga.
+    Enquanto essa Carta estiver ativa, todos os seus Ataques causam Dano adicional igual ao número de Cargas. Após realizar um Ataque, bem-sucedido ou não, essa Carta perde 1 Carga.
+  Soberania: |
+    Se essa Carta for destruída, você destrói um número de Cartas da mão do seu oponente igual ao número de Cargas que ela possuía.
+
+- ID: "065"
+  Nome: Inquietante, Extasiante
+  Tipo: Carta de Ação
+  Caminho: A Caça
+  Habilidade: |
+    Consome 2 Pontos de Perícia para lançar um Ataque, causando 4 de Dano. Se o Ataque for bem-sucedido, o alvo sofrerá 1 de Dano adicional por todos os seus Ataques até receber Cura.
+  Soberania: |
+    Ao lançar essa Carta, você e seu oponente escolhem 1 Carta de suas mãos para ser destruída e pegam 1 Carta do baralho.
+
+- ID: "066"
+  Nome: Mais Claro do que o Sol
+  Tipo: Carta de Ação
+  Caminho: A Destruição
+  Habilidade: |
+    Consome 3 Pontos de Perícia para lançar três Ataques em sucessão, o primeiro causando 1 de Dano, o segundo causando 2 de Dano e o terceiro causando 3 de Dano.
+  Soberania: |
+    Caso qualquer um dos três Ataques realizados através dessa Carta receba algum bônus ao seu Dano, o terceiro Ataque causa 1 de Dano adicional.
+
+- ID: "067"
+  Nome: Mas a Batalha Não Acabou
+  Tipo: Carta de Ação
+  Caminho: A Harmonia
+  Habilidade: |
+    Consome 1 Ponto de Perícia para pegar 2 Cartas do baralho e, se sua Vida for menor ou igual a metade do máximo, recebe 2 de Cura e recupera 2 Pontos de Perícia.
+  Soberania: |
+    Após lançar essa Carta, o seu próximo Ataque realizado nesse jogo tem seu Dano aumentado em 2.
+
+- ID: "068"
+  Nome: Momento de Vitória
+  Tipo: Carta de Suporte
+  Caminho: A Preservação
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, ela recebe 1 Carga sempre que você sofrer um Ataque ou tiver uma Carta de Suporte destruída, até o máximo de 2 Cargas. Para cada Carga, reduz todos os Danos sofridos em 1, ao mínimo de 1.
+  Soberania: |
+    Uma vez por turno, quando seu adversário usar uma Carta de Ação enquanto essa Carta estiver ativa, você pode gastar 1 Carga dessa Carta para destruir a Carta de Ação inimiga antes dela surtir efeito.
+
+- ID: "069"
+  Nome: Na Noite
+  Tipo: Carta de Ação
+  Caminho: A Caça
+  Habilidade: |
+    Consome 2 Pontos de Perícia para lançar um Ataque, causando 5 de Dano. Se houver alguma Carta de Suporte de Caça ativa, causa 1 de Dano adicional.
+  Soberania: |
+    Caso essa Carta esteja destruída, ela volta à sua mão assim que uma Carta de Suporte inimiga for destruída.
+
+- ID: "070"
+  Nome: Na Queda de Um Aeon
+  Tipo: Carta de Suporte
+  Caminho: A Destruição
+  Habilidade: |
+    No início de cada um dos seus turnos enquanto essa Carta estiver ativa, destrói uma Carta aleatória do baralho de ambos os jogadores. Se não houver Cartas suficientes no baralho de um jogador, ele sofre 1 de Dano ao invés.
+  Soberania: |
+    Enquanto o número de Cartas em seu baralho for menor ou igual a 5, essa Carta não pode ser destruída.
+
+- ID: "071"
+  Nome: Noite na Via Láctea
+  Tipo: Carta de Suporte
+  Caminho: A Erudição
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, todos os seus Ataques causam Dano adicional igual ao número de Cartas de Suporte ativas de seu oponente.
+  Soberania: |
+    Essa Carta não pode ser destruída por Cartas de Ação.
+
+- ID: "072"
+  Nome: O Lado Inacessível
+  Tipo: Carta de Ação
+  Caminho: A Destruição
+  Habilidade: |
+    Consome 2 Pontos de Perícia para recuperar um número de Pontos de Perícia igual a metade do número de Cartas de Destruição ou de Abundância destruídas nesse jogo, arredondando para cima.
+  Soberania: |
+    Quando essa Carta é lançada, ela destrói todas as Cartas de Destruição ou de Abundância que estejam ativas ou que estejam nas mãos dos jogadores. Para cada Carta destruída de um jogador, ele sofre 1 de Dano.
+
+- ID: "073"
+  Nome: O Tempo Não Espera por Ninguém
+  Tipo: Carta de Suporte
+  Caminho: A Abundância
+  Habilidade: |
+    No início de cada um dos seus turnos enquanto essa Carta estiver ativa, ela recebe 1 Carga. O seu máximo de Vida é aumentado em um valor igual ao seu número de Cargas, enquanto que o máximo de Vida do seu oponente é reduzido no mesmo valor.
+  Soberania: |
+    Quando essa Carta é destruída pelo adversário, os seus efeitos (que normalmente permaneceriam apenas enquanto essa Carta estivesse ativa) se tornam permanentes.
+
+- ID: "074"
+  Nome: Percorrendo o Mar Estelar
+  Tipo: Carta de Suporte
+  Caminho: A Caça
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, quaisquer Cartas de Ação de Caça que sejam destruídas voltam para o baralho.
+  Soberania: |
+    Durante seu turno, você pode escolher desativar essa Carta e mandá-la de volta ao baralho.
+
+- ID: "075"
+  Nome: Sono Profundo
+  Tipo: Carta de Suporte
+  Caminho: A Caça
+  Habilidade: |
+    Suas Cartas de Suporte de Caça, Abundância e Harmonia não podem ser destruídas pelo seu oponente. Cartas de Soberania, com exceção dessa, não são afetadas.
+  Soberania: |
+    Essa Carta não conta como uma de suas Cartas de Suporte ativas.
+
+- ID: "076"
+  Nome: Textura de Memórias
+  Tipo: Carta de Suporte
+  Caminho: A Preservação
+  Habilidade: |
+    Enquanto essa Carta estiver ativa, todas as suas Cartas são consideradas como sendo de todos os Caminhos simultaneamente.
+  Soberania: |
+    Enquanto houver ao menos uma outra Carta de Suporte sua ativa, essa Carta não conta como uma de suas Cartas de Suporte ativas, e não pode ser destruída por seu oponente. Do contrário, essa Carta é destruída no início de seu turno.
+
+- ID: "077"
+  Nome: Você Só Precisa de Paciência
+  Tipo: Carta de Suporte
+  Caminho: A Inexistência
+  Habilidade: |
+    Quando lançada, essa Carta recebe 1 Carga, e sempre que você iniciar seu turno com essa Carta ativa, ela recebe mais 1 Carga. Quando ela é destruída, você pode imediatamente lançar quantas Cartas de Ação quiser, contanto que a soma do custo de Pontos de Perícia das Cartas de Ação não exceda o número de Cargas que essa Carta possuía antes de ser destruída.
+  Soberania: |
+    Enquanto houver outra Carta de Suporte ativa, essa Carta não pode ser destruída pelo inimigo.

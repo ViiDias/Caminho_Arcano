@@ -1,0 +1,65 @@
+h1,h2,h3,h4{
+    margin: 0;
+    color: #FFF;
+}
+
+p {
+    margin: 0;
+    font-size: 15px;
+    white-space: pre-line; /* Mantém as quebras de linha */
+    color: #FFF;
+}
+
+html {
+    background-image: url(../img/backgrounds/ae953033-c319-45d7-a90d-cacde5705885.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Isso evita que o fundo role com a página */
+    height: 100%; /* Define a altura da página como 100% */
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    top: 0;
+    width: 100%;
+    height: 38px;
+    padding: 10px 20px;
+    background-color: #111010;
+    color: white;
+    border-bottom:0.1px solid #3a3a3a;
+
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    position: fixed;
+}
+
+.nav-list {
+    display: flex; /* Exibir os elementos em linha */
+    gap: 50px; /* Espaçamento entre os elementos */
+}
+
+.nav-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.nav-item.active {
+    color: #307af7;
+    border-bottom: 2px solid #307af7; /* Adicione uma linha azul na parte inferior do link ativo */
+}
+
+.conteudo {
+    margin-top: 100px;
+    max-width: 70%;
+    padding: 20px;
+}
