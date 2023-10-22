@@ -1,6 +1,6 @@
 // Função para carregar e exibir as cartas de Filosofia
 async function loadFilosofiaCards() {
-    const response = await fetch('../data/cartasSoberania.yaml'); // Substitua pelo caminho correto do seu arquivo YAML
+    const response = await fetch('./data/cartasSoberania.yaml'); // Substitua pelo caminho correto do seu arquivo YAML
     const text = await response.text();
     const cardsData = jsyaml.load(text);
     
