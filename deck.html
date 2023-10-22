@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/favicon/card.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/deck.css">
     <title>Caminho Arcano</title>
 </head>
 <body>
@@ -20,7 +22,27 @@
     </div>
     
     <div class="conteudo">
+        <Header class="header-deck">
+            <div class="deck-item">
+                <h2>Meu Deck</h2>
+                <img class="img-deck" src="./img/favicon/editar.png" alt="lapis">
+            </div>
+            <div class="deck-item">
+                <img class="img-cards" src="./img/favicon/card.png" alt="lapis">
+                <h3 id="cartasTotais"></h3>
+            </div>
+        </Header>
+        <h2 id="cartasFilo"></h2>
+        <div class="filosofia"></div>
+
+        <h2 id="cartasMemo"></h2>
+        <div class="memoria"></div>
+
+        <h2 id="cartasSobe"></h2>
+        <div class="soberania"></div>
     </div>
+    <script src="./js/listarCartas.js"></script>
+    <script src="./js/montarDeck.js"></script>
     <script src="./js/navbar.js"></script>
 </body>
 </html>
