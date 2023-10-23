@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+  let nomeDoDeck = 'Meu Deck'; // Inicialize o nome do deck com um valor padrão
+
+  const btnConfirmar = document.getElementById('btnConfirmar');
+  btnConfirmar.style.display = 'none';
+
   const meuDeck = {
     filosofia: [],
     memoria: [],
     soberania: []
   };
 
-  const btnConfirmar = document.getElementById('btnConfirmar');
-  btnConfirmar.style.display = 'none';
 
   function atualizarContagem() {
     const divCartasFilo = document.getElementById('cartasFilo');
@@ -25,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const totalCartas = meuDeck.filosofia.length + meuDeck.memoria.length + meuDeck.soberania.length;
     const divCartasTotais = document.getElementById('cartasTotais');
-    divCartasTotais.textContent = `Total de Cartas: ${totalCartas}`;
+    divCartasTotais.textContent = `Total de Cartas: ${totalCartas}/20`;
 
     if (totalCartas >= 20) {
       btnConfirmar.style.display = 'block';
@@ -36,10 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   atualizarContagem();
 
-  function adicionarEventosClique() {
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach(card => {
+  // Função para adicionar o evento de clique a uma carta
+  function adicionarEventoClique(cartas) {
+    cartas.forEach(card => {
       card.addEventListener('click', () => {
         const cardId = card.id;
         let categoria = null;
@@ -71,14 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           }
 
-          // Adicione temporariamente a classe "pulse" para aplicar a animação
-          card.classList.add('pulse');
-
-          // Remova a classe "pulse" após a animação (ajuste a duração da animação no CSS)
-          setTimeout(() => {
-            card.classList.remove('pulse');
-          }, 1000);
-
           meuDeck[categoria].push(cardId);
           atualizarContagem();
         }
@@ -86,18 +80,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  if (document.querySelectorAll('.card').length > 0) {
-    adicionarEventosClique();
-  } else {
-    const observer = new MutationObserver(function(mutationsList) {
-      if (document.querySelectorAll('.card').length > 0) {
-        observer.disconnect();
-        adicionarEventosClique();
-      }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
+  // Função para verificar as cartas e adicionar eventos de clique quando prontas
+  function verificarCartas() {
+    const cards = document.querySelectorAll('.card');
+    if (cards.length > 0) {
+      adicionarEventoClique(cards);
+    } else {
+      setTimeout(verificarCartas, 500); // Verifique novamente após um curto atraso
+    }
   }
+
+  // Comece verificando as cartas quando o DOM estiver pronto
+  verificarCartas();
 
   function getMaximoCartas(categoria) {
     if (categoria === 'filosofia') {
@@ -111,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   btnConfirmar.addEventListener('click', function() {
     // Construa uma mensagem com os dados do objeto meuDeck
-    let mensagem = 'Meu Deck:\n';
+    let mensagem = nomeDoDeck+':\n';
 
     for (const categoria in meuDeck) {
       mensagem += `${categoria.charAt(0).toUpperCase() + categoria.slice(1)}:\n`;
@@ -122,4 +116,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     alert(mensagem);
   });
+
+  // Evento para abrir o modal quando "Meu Deck" é clicado
+  const deckSection = document.querySelector('.deck-item');
+  const modal = document.getElementById('myModal');
+  const closeModal = document.getElementById('closeModal');
+  const deckNameInput = document.getElementById('deckNameInput');
+  const saveDeckNameButton = document.getElementById('saveDeckName');
+
+  deckSection.addEventListener('click', function() {
+    modal.style.display = 'block';
+  });
+
+  closeModal.addEventListener('click', function() {
+    modal.style.display = 'none';
+  });
+
+  // Quando o usuário clica em "Salvar" no modal
+  saveDeckNameButton.addEventListener('click', function() {
+    // Obtenha o valor do input do modal
+    const novoNomeDoDeck = deckNameInput.value;
+    if (novoNomeDoDeck) {
+      // Atualize o nome do deck e o conteúdo do <h2>
+      nomeDoDeck = novoNomeDoDeck;
+      const headerDeck = document.querySelector('.header-deck h2');
+      headerDeck.textContent = novoNomeDoDeck;
+    }
+  });
+
 });
