@@ -19,7 +19,8 @@ async function loadCards(tipo, containerClass, dataFile) {
     cardsData.forEach((cardData) => {
         const cardHTML = document.createElement('div');
         cardHTML.classList.add('card');
-  
+        cardHTML.setAttribute('id', cardData.ID);
+        
         // Construa o caminho da imagem com base no ID da carta
         const imagePath = `./img/cards/card_${cardData.ID}.jpeg`;
         cardHTML.style.backgroundImage = `url(${imagePath})`;
