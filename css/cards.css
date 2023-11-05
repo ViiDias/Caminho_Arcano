@@ -18,8 +18,8 @@
 }
 
 .card {
-    width: 281px; /* Largura da carta */
-    height: 400px;
+    width: 143px; /* Largura da carta */
+    height: 200px
     border-radius: 4px;  
     padding: 10px;
     background-size: cover; /* Ajusta a imagem para cobrir todo o espaço da carta */
