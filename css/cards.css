@@ -70,8 +70,7 @@
     color: #e0e0e0;
 }
 
-
-  /* CSS media query dentro de um stylesheet */
+/* CSS media query dentro de um stylesheet */
 @media (max-width: 1024px) {
     .filosofia, .memoria, .soberania {
         display: grid;
