@@ -80,7 +80,7 @@
   Tipo: Carta de Suporte
   Caminho: A Inexistência
   Habilidade: |
-    Quando uma Carta de Suporte ativa de seu oponente for destruída, incluindo essa própria, ela apenas volta para sua mão. Após surtir efeito, essa Carta é destruída e volta à sua mão. Porém, se o efeito dessa Carta for desencadeado por você, Loop não volta à sua mão ao se autodestruir.
+    Quando uma Carta de Suporte ativa sua for destruída, incluindo essa própria, ela apenas volta para sua mão. Após surtir efeito, essa Carta é destruída e volta à sua mão. Porém, se o efeito dessa Carta for desencadeado por você, Loop não volta à sua mão ao se autodestruir.
 
 - ID: "012"
   Nome: Mediação
