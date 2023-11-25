@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cartas.forEach(card => {
       card.addEventListener('click', () => {
         const cardId = card.id;
+        const nomeDaCarta = card.name;
         let categoria = null;
 
         if (card.parentElement.classList.contains('filosofia')) {
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           }
 
-          meuDeck[categoria].push(cardId);
+          meuDeck[categoria].push({ id: cardId, nome: nomeDaCarta });
           atualizarContagem();
         }
       });
@@ -105,42 +106,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   btnConfirmar.addEventListener('click', function() {
     // Construa uma mensagem com os dados do objeto meuDeck
-    let mensagem = nomeDoDeck + ':\n';
+    let mensagem = nomeDoDeck+':\n';
 
     for (const categoria in meuDeck) {
-        mensagem += `${categoria.charAt(0).toUpperCase() + categoria.slice(1)}:\n`;
-        meuDeck[categoria].forEach(cardId => {
-            const cardInfo = getCardInfo(cardId); // Função para obter informações da carta
-            mensagem += `- ID: ${cardId}, Nome: ${cardInfo.Nome}\n`;
-        });
+      mensagem += `${categoria.charAt(0).toUpperCase() + categoria.slice(1)}:\n`;
+      meuDeck[categoria].forEach(carta => {
+        mensagem += `- ${carta}\n`;
+      });
     }
 
     alert(mensagem);
-});
-
-// Função para obter informações da carta com base no ID
-function getCardInfo(cardId) {
-    const cardsData = getAllCardsData(); // Função para obter todos os dados das cartas
-    const cardData = cardsData.find(card => card.ID === cardId);
-    return cardData || { Nome: 'Nome Desconhecido' }; // Tratamento caso não encontre a carta
-}
-
-// Função para obter todos os dados das cartas
-function getAllCardsData() {
-    const filosofiaData = loadCardsData('cartasFilo.yaml');
-    const memoriaData = loadCardsData('cartasMemo.yaml');
-    const soberaniaData = loadCardsData('cartasSoberania.yaml');
-
-    return filosofiaData.concat(memoriaData, soberaniaData);
-}
-
-// Função para carregar os dados das cartas
-async function loadCardsData(dataFile) {
-    const response = await fetch(`./data/${dataFile}`);
-    const text = await response.text();
-    return jsyaml.load(text) || [];
-}
-
+  });
 
   // Evento para abrir o modal quando "Meu Deck" é clicado
   const deckSection = document.querySelector('.deck-item');
