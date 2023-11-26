@@ -9,7 +9,7 @@
 
 .filosofia, .memoria, .soberania {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Define 8 colunas de largura igual */
+    grid-template-columns: repeat(5, 1fr); /* Define 8 colunas de largura igual */
     gap: 0.4rem; /* Espaçamento entre as cartas */
     justify-content: center; /* Centraliza horizontalmente */
     margin-bottom: 20px;
