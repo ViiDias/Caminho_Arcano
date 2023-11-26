@@ -20,15 +20,17 @@ html {
 
 body {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .navbar {
     top: 0;
     width: 100%;
-    height: 38px;
+    height: 4vh;
     padding: 10px 20px;
     background-color: #111010;
     color: white;
@@ -41,16 +43,19 @@ body {
 }
 
 .nav-list {
-    display: flex; /* Exibir os elementos em linha */
-    gap: 50px; /* Espaçamento entre os elementos */
+    display: flex;    
+    margin: 0;
+    padding: 0;
 }
 
 .nav-item {
+    width: 14vh;
     cursor: pointer;
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 60px;
     padding: 0 20px;
+    font-size: 2vh;
 }
 
 .nav-item.active {
@@ -59,7 +64,7 @@ body {
 }
 
 .conteudo {
-    margin-top: 100px;
+    margin-top: 100px; /* Reduzi o margin-top para 80px */
     max-width: 70%;
     padding: 20px;
 }
