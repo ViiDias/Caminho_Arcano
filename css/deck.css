@@ -115,7 +115,7 @@
 }
 
   /* CSS media query dentro de um stylesheet */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .filosofia, .memoria, .soberania {
         display: grid;
         grid-template-columns: repeat(5, 1fr); /* Define 8 colunas de largura igual */
