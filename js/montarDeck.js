@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cartas.forEach(card => {
       card.addEventListener('click', () => {
         const cardId = card.id;
-        const cardName = card.name;
+        const cardName = card.getAttribute('name');  // Use getAttribute para acessar propriedades personalizadas
 
         console.log(cardName);
         let categoria = null;
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           }
 
-          meuDeck[categoria].push(cardId);
+          meuDeck[categoria].push({ id: cardId, nome: cardName });
           atualizarContagem();
         }
       });
