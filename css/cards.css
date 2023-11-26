@@ -1,48 +1,47 @@
+/* CSS padrão */
 .conteudo {
     display: inline-block;
     justify-content: center;
     flex-direction: column;
-    border:0.1px solid #d0cacc;
+    border: 0.1px solid #d0cacc;
     background-color: #3a3a3a49;
     border-radius: 6px;
 }
 
-.filosofia, .memoria, .soberania {
+.filosofia,
+.memoria,
+.soberania {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Define 8 colunas de largura igual */
-    gap: 0.4rem; /* Espaçamento entre as cartas */
-    justify-content: center; /* Centraliza horizontalmente */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.4rem;
+    justify-content: center;
     margin-bottom: 20px;
-
 }
 
 .card {
-    width: 281px; /* Largura da carta */
+    width: 281px;
     height: 400px;
-    border-radius: 4px;  
+    border-radius: 4px;
     padding: 10px;
-    background-size: cover; /* Ajusta a imagem para cobrir todo o espaço da carta */
-    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.header{
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
     color: #FFF;
     font-family: 'Archivo Black', sans-serif;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #5e5656;
-    
 }
 
 .header h3 {
-    border-bottom:2px solid #CCC;
-    text-align:center;
+    border-bottom: 2px solid #CCC;
+    text-align: center;
     font-size: 24px;
-
 }
 
 .logo {
@@ -54,63 +53,50 @@
 
 .description {
     background-color: #5e565680;
-    border:3px solid #d0cacc;
+    border: 3px solid #d0cacc;
     border-radius: 6px;
-    
 }
 
-.description p{
-    font-family: 'Josefin Sans', sans-serif;    
+.description p {
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 14px;
     color: #e0e0e0;
 }
 
-/* CSS media query dentro de um stylesheet */
+/* Mídias Query */
+
+/* Adaptação para tablets e telas menores */
+
 @media (max-width: 1024px) {
-    .filosofia, .memoria, .soberania {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr); /* Define 8 colunas de largura igual */
-        grid-template-rows: repeat(3, 1fr); /* Define 3 linhas de altura igual */
-        gap: 0.4rem; /* Espaçamento entre as cartas */
-        justify-content: center; /* Centraliza horizontalmente */
-        margin-bottom: 20px;
-    
+    .filosofia,
+    .memoria,
+    .soberania {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
-  }
+}
 
-  
-/* CSS media query dentro de um stylesheet */
+/* Adaptação para tablets pequenos */
+
 @media (max-width: 912px) {
-    .filosofia, .memoria, .soberania {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Define 8 colunas de largura igual */
-        gap: 0.4rem; /* Espaçamento entre as cartas */
-        justify-content: center; /* Centraliza horizontalmente */
-        margin-bottom: 20px;
-    
+    .filosofia,
+    .memoria,
+    .soberania {
+        grid-template-columns: repeat(3, 1fr);
     }
-  }
+}
 
-/* CSS media query dentro de um stylesheet */
-@media (max-width: 768px) {
-    .filosofia, .memoria, .soberania {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Define 8 colunas de largura igual */
-        gap: 0.4rem; /* Espaçamento entre as cartas */
-        justify-content: center; /* Centraliza horizontalmente */
-        margin-bottom: 20px;
-    
-    }
-  }  
+/* Adaptação para dispositivos móveis */
 
-/* CSS media query dentro de um stylesheet */
 @media (max-width: 600px) {
-    .filosofia, .memoria, .soberania {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Define 8 colunas de largura igual */
-        gap: 0.4rem; /* Espaçamento entre as cartas */
-        justify-content: center; /* Centraliza horizontalmente */
-        margin-bottom: 20px;
-    
+    .filosofia,
+    .memoria,
+    .soberania {
+        grid-template-columns: repeat(2, 1fr);
     }
-  }  
+
+    .card {
+        width: 100%; /* Ocupar 100% da largura do container pai */
+        height: auto; /* Altura automática para manter a proporção */
+    }
+}
