@@ -9,8 +9,7 @@
 
 .filosofia, .memoria, .soberania {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Define 8 colunas de largura igual */
-    grid-template-rows: repeat(3, 1fr); /* Define 3 linhas de altura igual */
+    grid-template-columns: repeat(6, 1fr); /* Define 8 colunas de largura igual */
     gap: 0.4rem; /* Espaçamento entre as cartas */
     justify-content: center; /* Centraliza horizontalmente */
     margin-bottom: 20px;
@@ -18,8 +17,8 @@
 }
 
 .card {
-    width: 143px; /* Largura da carta */
-    height: 200px
+    width: 281px; /* Largura da carta */
+    height: 400px;
     border-radius: 4px;  
     padding: 10px;
     background-size: cover; /* Ajusta a imagem para cobrir todo o espaço da carta */
