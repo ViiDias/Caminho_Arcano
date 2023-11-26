@@ -115,7 +115,7 @@
 }
 
   /* CSS media query dentro de um stylesheet */
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .filosofia, .memoria, .soberania {
         display: grid;
         grid-template-columns: repeat(5, 1fr); /* Define 8 colunas de largura igual */
@@ -129,7 +129,7 @@
 
   
 /* CSS media query dentro de um stylesheet */
-@media (max-width: 912px) {
+@media (max-width: 940px) {
     .filosofia, .memoria, .soberania {
         display: grid;
         grid-template-columns: repeat(4, 1fr); /* Define 8 colunas de largura igual */
@@ -138,10 +138,36 @@
         margin-bottom: 20px;
     
     }
+
+    h2, h3 {
+      font-size: 14px;
+    }
+
+    .card {
+      width: 130px; /* Largura da carta */
+      height: 182px;
+      border-radius: 2px;  
+      
+      cursor: pointer;
+      background-size: cover; /* Ajusta a imagem para cobrir todo o espaço da carta */
+      background-repeat: no-repeat; /* Impede a repetição da imagem */
+    }
   }
 
 /* CSS media query dentro de um stylesheet */
 @media (max-width: 768px) {
+    .filosofia, .memoria, .soberania {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Define 8 colunas de largura igual */
+        gap: 0.4rem; /* Espaçamento entre as cartas */
+        justify-content: center; /* Centraliza horizontalmente */
+        margin-bottom: 20px;
+    
+    }
+  }  
+
+/* CSS media query dentro de um stylesheet */
+@media (max-width: 720px) {
     .filosofia, .memoria, .soberania {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Define 8 colunas de largura igual */
@@ -154,12 +180,12 @@
 
 /* CSS media query dentro de um stylesheet */
 @media (max-width: 600px) {
-    .filosofia, .memoria, .soberania {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Define 8 colunas de largura igual */
-        gap: 0.4rem; /* Espaçamento entre as cartas */
-        justify-content: center; /* Centraliza horizontalmente */
-        margin-bottom: 20px;
-    
-    }
-  }  
+  .filosofia, .memoria, .soberania {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Define 8 colunas de largura igual */
+      gap: 0.4rem; /* Espaçamento entre as cartas */
+      justify-content: center; /* Centraliza horizontalmente */
+      margin-bottom: 20px;
+  
+  }
+}
