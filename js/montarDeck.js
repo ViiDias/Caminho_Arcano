@@ -73,12 +73,12 @@ function adicionarEventoClique(cartas) {
           return;
         }
 
-          meuDeck[categoria].push({ id: cardId, nome: cardName });
-          atualizarContagem();
-        }
-      });
+        categoriaDeck.push({ id: cardId, nome: cardName });
+        atualizarContagem();
+      }
     });
-  }
+  });
+}
 
 
   // Função para verificar as cartas e adicionar eventos de clique quando prontas
