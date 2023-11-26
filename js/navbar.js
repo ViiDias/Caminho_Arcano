@@ -12,7 +12,7 @@ navItems.forEach((item) => {
         item.classList.add('active');
     } else if (text === 'Cartas Arcanas' && currentPage === '/Caminho_Arcano/cards.html') {
         item.classList.add('active');
-    } else if (text === 'Monte Seu Deck' && currentPage === '/Caminho_Arcano/deck.html') {
+    } else if (text === 'Monte Seu Deck' && currentPage === '/Caminho_Arcano/criarDeck.html') {
         item.classList.add('active');
     }
 });
