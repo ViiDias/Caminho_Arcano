@@ -1,14 +1,30 @@
 .header-deck{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    height: 38px;
-    padding: 10px 20px;
-    background-color: #d0cacc4d;
-    border-bottom:0.1px solid #3a3a3a;
-    border-radius: 8px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 42px;
+  background-color: #d0cacc4d;
+  border-bottom:0.1px solid #3a3a3a;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+}
+
+.header-list {
+  width: 100%;
+  display: flex;    
+  margin: 0;
+  padding: 0;
+}
+
+.deck-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  gap: 1vh;
+  width: 100%;
 
 }
 
@@ -22,13 +38,27 @@
     height: 42px;
 }
 
-.deck-item {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente os elementos filhos, que incluem as imagens */
-    padding: 10px;
-    gap: 10px;
+
+#btnConfirmar {
+  border: none;
+  background-color: #307af7;
+  border-radius: 6px;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 2vh;
 }
 
+.modal-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Cor do fundo cinza semi-transparente */
+  justify-content: center;
+  align-items: center;
+}
 
 .conteudo {
     display: inline-block;
@@ -39,7 +69,7 @@
     border-radius: 6px;
 }
 
-.filosofia, .memoria, .soberania {
+.filosofia-cards, .memoria-cards, .soberania-cards {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* Define 8 colunas de largura igual */
     grid-template-rows: repeat(3, 1fr); /* Define 3 linhas de altura igual */
@@ -48,9 +78,9 @@
     margin-bottom: 20px;
 }
 
-.card {
-    width: 143px; /* Largura da carta */
-    height: 200px;
+.cards {
+    width: 193px; /* Largura da carta */
+    height: 270px;
     border-radius: 2px;  
     
     cursor: pointer;
@@ -74,11 +104,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
   padding: 20px;
 }
 
 .header{
+  padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,6 +123,11 @@
 .header h3 {
     border-bottom:2px solid #CCC;
     text-align:center;
+    font-size: 15px;
+}
+
+.header h4 {
+  font-size: 12px;
 }
 
 .logo {
@@ -115,8 +150,8 @@
 }
 
   /* CSS media query dentro de um stylesheet */
-@media (max-width: 1100px) {
-    .filosofia, .memoria, .soberania {
+@media (max-width: 1600px) {
+.filosofia-cards, .memoria-cards, .soberania-cards {
         display: grid;
         grid-template-columns: repeat(5, 1fr); /* Define 8 colunas de largura igual */
         grid-template-rows: repeat(3, 1fr); /* Define 3 linhas de altura igual */
@@ -125,12 +160,36 @@
         margin-bottom: 20px;
     
     }
+    
   }
+
+    /* CSS media query dentro de um stylesheet */
+@media (max-width: 1600px) {
+  .filosofia-cards, .memoria-cards, .soberania-cards {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr); /* Define 8 colunas de largura igual */
+          grid-template-rows: repeat(3, 1fr); /* Define 3 linhas de altura igual */
+          gap: 0.4rem; /* Espaçamento entre as cartas */
+          justify-content: center; /* Centraliza horizontalmente */
+          margin-bottom: 20px;
+      
+      }
+      .cards {
+        width: 130px; /* Largura da carta */
+        height: 182px;
+        border-radius: 2px;  
+        
+        cursor: pointer;
+        background-size: cover; /* Ajusta a imagem para cobrir todo o espaço da carta */
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+      }
+      
+    }
 
   
 /* CSS media query dentro de um stylesheet */
 @media (max-width: 940px) {
-    .filosofia, .memoria, .soberania {
+    .filosofia-cards, .memoria-cards, .soberania-cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr); /* Define 8 colunas de largura igual */
         gap: 0.4rem; /* Espaçamento entre as cartas */
@@ -143,7 +202,7 @@
       font-size: 14px;
     }
 
-    .card {
+    .cards {
       width: 130px; /* Largura da carta */
       height: 182px;
       border-radius: 2px;  
@@ -156,7 +215,7 @@
 
 /* CSS media query dentro de um stylesheet */
 @media (max-width: 768px) {
-    .filosofia, .memoria, .soberania {
+    .filosofia-cards, .memoria-cards, .soberania-cards {
         display: grid;
         grid-template-columns: repeat(4, 1fr); /* Define 8 colunas de largura igual */
         gap: 0.4rem; /* Espaçamento entre as cartas */
@@ -168,7 +227,7 @@
 
 /* CSS media query dentro de um stylesheet */
 @media (max-width: 720px) {
-    .filosofia, .memoria, .soberania {
+    .filosofia-cards, .memoria-cards, .soberania-cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Define 8 colunas de largura igual */
         gap: 0.4rem; /* Espaçamento entre as cartas */
@@ -180,7 +239,7 @@
 
 /* CSS media query dentro de um stylesheet */
 @media (max-width: 600px) {
-  .filosofia, .memoria, .soberania {
+    .filosofia-cards, .memoria-cards, .soberania-cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* Define 8 colunas de largura igual */
       gap: 0.4rem; /* Espaçamento entre as cartas */
