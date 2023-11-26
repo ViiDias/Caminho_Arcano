@@ -131,7 +131,7 @@ function adicionarEventoClique(cartas) {
     localStorage.setItem('deckData', JSON.stringify(meuDeck));
 
     // Navega para a nova página
-    window.location.href = 'deck.html';
+    window.location.href = '/Caminho_Arcano/deck.html';
   });
 
   // Adiciona evento de clique ao botão de fechar no modal
