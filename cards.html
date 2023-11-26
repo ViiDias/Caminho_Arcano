@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon/card.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/cards.css">
-    <link rel="shortcut icon" href="./img/favicon/card.png" type="image/x-icon">
+    <script src="./js/listarFull.js"></script>
     <title>Caminho Arcano</title>
 </head>
 <body>
     <div class="navbar">
         <div class="nav-list">
             <div class="nav-item" onclick="navigateTo('index.html')">Página Inicial</div>
-            <div class="nav-item" onclick="navigateTo('deck.html')">Monte Seu Deck</div>
+            <div class="nav-item" onclick="navigateTo('criarDeck.html')">Monte Seu Deck</div>
             <div class="nav-item" onclick="navigateTo('cards.html')">Cartas Arcanas</div>
         </div>
     </div>    
     <div class="conteudo">
         <h2>Cartas de Filosofia:</h2>
-        <div class="filosofia"></div>
+        <div class="filosofia"><script>loadCards('Filosofia', 'filosofia');</script></div>
 
         <h2>Cartas de Memoria</h2>
-        <div class="memoria"></div>
+        <div class="memoria"><script>loadCards('Memória', 'memoria');</script></div>
 
         <h2>Cartas de Soberania</h2>
-        <div class="soberania"></div>
+        <div class="soberania"><script>loadCards('Soberania', 'soberania');</script></div>
     </div>
-    <script src="./js/index.js"></script>
-    <script src="./js/soberania.js"></script>
     <script src="./js/navbar.js"></script>
 </body>
 </html>
