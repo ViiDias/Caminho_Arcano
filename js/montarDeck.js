@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
   btnConfirmar.style.display = 'none';
 
   const meuDeck = {
-    filosofia: [],
-    memoria: [],
-    soberania: []
+    Filosofia: [],
+    Memória: [],
+    Soberania: []
   };
 
 
@@ -17,16 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const divCartasSobe = document.getElementById('cartasSobe');
 
     if (divCartasFilo) {
-      divCartasFilo.textContent = `Cartas de Filosofia: ${meuDeck.filosofia.length}/12`;
+      divCartasFilo.textContent = `Cartas de Filosofia: ${meuDeck.Filosofia.length}/12`;
     }
     if (divCartasMemo) {
-      divCartasMemo.textContent = `Cartas de Memoria: ${meuDeck.memoria.length}/6`;
+      divCartasMemo.textContent = `Cartas de Memoria: ${meuDeck.Memória.length}/6`;
     }
     if (divCartasSobe) {
-      divCartasSobe.textContent = `Cartas de Soberania: ${meuDeck.soberania.length}/2`;
+      divCartasSobe.textContent = `Cartas de Soberania: ${meuDeck.Soberania.length}/2`;
     }
 
-    const totalCartas = meuDeck.filosofia.length + meuDeck.memoria.length + meuDeck.soberania.length;
+    const totalCartas = meuDeck.Filosofia.length + meuDeck.Memória.length + meuDeck.Soberania.length;
     const divCartasTotais = document.getElementById('cartasTotais');
     divCartasTotais.textContent = `Total de Cartas: ${totalCartas}/20`;
 
@@ -39,74 +39,86 @@ document.addEventListener('DOMContentLoaded', function() {
 
   atualizarContagem();
 
-  // Função para adicionar o evento de clique a uma carta
+// Função para adicionar o evento de clique a uma carta
 function adicionarEventoClique(cartas) {
   cartas.forEach(card => {
     card.addEventListener('click', () => {
       const cardId = card.id;
-      const cardName = card.getAttribute('name');
+      const cardCategoria = card.getAttribute('categoria');
 
-      let categoria = null;
+      // Limpa o conteúdo existente no modal antes de adicionar a nova carta
+      const modalCardContent = document.querySelector('.modalCardContent');
+      modalCardContent.innerHTML = '';
 
-      if (card.parentElement.classList.contains('filosofia')) {
-        categoria = 'filosofia';
-      } else if (card.parentElement.classList.contains('memoria')) {
-        categoria = 'memoria';
-      } else if (card.parentElement.classList.contains('soberania')) {
-        categoria = 'soberania';
-      }
+      // Carrega apenas a carta com ID "1" na classe "filosofia"
+      loadCards(cardCategoria, 'modalCardContent', cardId);
 
-      if (categoria) {
-        const categoriaDeck = meuDeck[categoria];
-        const numCartasComId = categoriaDeck.filter(carta => carta.id === cardId).length;
-
-        if (categoriaDeck.length >= getMaximoCartas(categoria)) {
-          alert(`Você atingiu o limite máximo de cartas de ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}.`);
-          return;
-        }
-
-        if ((categoria === 'filosofia' || categoria === 'memoria') && numCartasComId >= 2) {
-          alert(`Você atingiu o limite de 2 cartas com o mesmo ID em ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}.`);
-          return;
-        } else if (categoria === 'soberania' && numCartasComId >= 1) {
-          alert(`Você já possui uma carta com o mesmo ID em Soberania.`);
-          return;
-        }
-
-        categoriaDeck.push({ id: cardId, nome: cardName });
-        atualizarContagem();
-      }
+      // Exibir o modal
+      const modalBackground = document.getElementById('modalBackground');
+      modalBackground.style.display = 'block';  // Corrigido o nome da variável
     });
   });
 }
 
+  // Função para fechar o modal
+  function fecharModalCards() {
+    const modal = document.getElementById('modalBackground');
+    
+    modal.style.display = 'none';
+  }
 
-  // Função para verificar as cartas e adicionar eventos de clique quando prontas
-  function verificarCartas() {
-    const cards = document.querySelectorAll('.card');
-    if (cards.length > 0) {
-      adicionarEventoClique(cards);
-    } else {
-      setTimeout(verificarCartas, 500); // Verifique novamente após um curto atraso
+  // Função para salvar a carta (você pode implementar a lógica desejada)
+  function salvarCarta() {
+    // Lógica para salvar a carta
+    // Obtenha o tipo da carta do modal
+    const modalCardContent = document.querySelector('.modalCardContent');
+    const modalCard = modalCardContent.querySelector('.card');
+
+    const cardId = modalCard.id;
+    const cardName = modalCard.getAttribute('name');
+    const categoria = modalCard.getAttribute('categoria');
+
+    if (categoria) {
+      const categoriaDeck = meuDeck[categoria];
+      const numCartasComId = categoriaDeck.filter(carta => carta.id === cardId).length;
+
+      if (categoriaDeck.length >= getMaximoCartas(categoria)) {
+        alert(`Você atingiu o limite máximo de cartas de ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}.`);
+        return;
+      }
+
+      if ((categoria === 'Filosofia' || categoria === 'Memória') && numCartasComId >= 2) {
+        alert(`Você atingiu o limite de 2 cartas com o mesmo ID em ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}.`);
+        return;
+      } else if (categoria === 'Soberania' && numCartasComId >= 1) {
+        alert(`Você já possui uma carta com o mesmo ID em Soberania.`);
+        return;
+      }
+
+      categoriaDeck.push({ id: cardId, nome: cardName, categoria: categoria });
+      atualizarContagem();
+
     }
+
   }
 
   // Comece verificando as cartas quando o DOM estiver pronto
   verificarCartas();
 
   function getMaximoCartas(categoria) {
-    if (categoria === 'filosofia') {
+    if (categoria === 'Filosofia') {
       return 12;
-    } else if (categoria === 'memoria') {
+    } else if (categoria === 'Memória') {
       return 6;
-    } else if (categoria === 'soberania') {
+    } else if (categoria === 'Soberania') {
       return 2;
     }
   }
 
-  btnConfirmar.addEventListener('click', function() {
+  // Adiciona evento de clique ao botão btnConfirmar
+  btnConfirmar.addEventListener('click', function () {
     // Construa uma mensagem com os dados do objeto meuDeck
-    let mensagem = nomeDoDeck+':\n';
+    let mensagem = nomeDoDeck + ':\n';
 
     for (const categoria in meuDeck) {
       mensagem += `${categoria.charAt(0).toUpperCase() + categoria.slice(1)}:\n`;
@@ -115,34 +127,55 @@ function adicionarEventoClique(cartas) {
       });
     }
 
-    alert(mensagem);
+    // Salva os dados no localStorage (pode ser ajustado conforme necessário)
+    localStorage.setItem('deckData', JSON.stringify(meuDeck));
+
+    // Navega para a nova página
+    window.location.href = 'deck.html';
   });
 
-  // Evento para abrir o modal quando "Meu Deck" é clicado
-  const deckSection = document.querySelector('.deck-item');
-  const modal = document.getElementById('myModal');
-  const closeModal = document.getElementById('closeModal');
-  const deckNameInput = document.getElementById('deckNameInput');
-  const saveDeckNameButton = document.getElementById('saveDeckName');
+  // Adiciona evento de clique ao botão de fechar no modal
+  const closeModalButton = document.getElementById('closeModalCards');
+  closeModalButton.addEventListener('click', fecharModalCards);
 
-  deckSection.addEventListener('click', function() {
-    modal.style.display = 'block';
-  });
+  // Adiciona evento de clique ao botão de salvar no modal
+  const saveCardButton = document.getElementById('addCard');
+  saveCardButton.addEventListener('click', salvarCarta);
 
-  closeModal.addEventListener('click', function() {
-    modal.style.display = 'none';
-  });
+  // Função para verificar as cartas e adicionar eventos de clique quando prontas
+  function verificarCartas() {
+    const cards = document.querySelectorAll('.cards');
+    if (cards.length > 0) {
+      adicionarEventoClique(cards);
+    } else {
+      setTimeout(verificarCartas, 500); // Verifique novamente após um curto atraso
+    }
+  }
 
-  // Quando o usuário clica em "Salvar" no modal
-  saveDeckNameButton.addEventListener('click', function() {
-    // Obtenha o valor do input do modal
+  // Função para abrir o modal Deck Name
+  function abrirModal() {
+    document.getElementById('myModal').style.display = 'block';
+  }
+
+  // Função para fechar o modal Deck Name
+  function fecharModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+
+  // Função para salvar o nome do deck
+  function salvarNomeDoDeck() {
     const novoNomeDoDeck = deckNameInput.value;
     if (novoNomeDoDeck) {
-      // Atualize o nome do deck e o conteúdo do <h2>
       nomeDoDeck = novoNomeDoDeck;
       const headerDeck = document.querySelector('.header-deck h2');
       headerDeck.textContent = novoNomeDoDeck;
     }
-  });
+    fecharModal();
+  }
+
+  // Adiciona eventos aos elementos
+  document.querySelector('.deck-item').addEventListener('click', abrirModal);
+  document.getElementById('closeModal').addEventListener('click', fecharModal);
+  document.getElementById('saveDeckName').addEventListener('click', salvarNomeDoDeck);
 
 });
