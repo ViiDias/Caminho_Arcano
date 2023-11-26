@@ -1,3 +1,34 @@
+.header-deck{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 38px;
+    padding: 10px 20px;
+    background-color: #d0cacc4d;
+    border-bottom:0.1px solid #3a3a3a;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+}
+
+.img-deck {
+    width: 24px;
+    height: 22px;
+}
+
+.img-cards {
+    width: 48px;
+    height: 42px;
+}
+
+.deck-item {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os elementos filhos, que incluem as imagens */
+    padding: 10px;
+    gap: 10px;
+}
+
 .conteudo {
     display: inline-block;
     justify-content: center;
