@@ -106,17 +106,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   btnConfirmar.addEventListener('click', function() {
     // Construa uma mensagem com os dados do objeto meuDeck
-    let mensagem = nomeDoDeck+':\n';
+    let mensagem = nomeDoDeck + ':\n';
 
     for (const categoria in meuDeck) {
-      mensagem += `${categoria.charAt(0).toUpperCase() + categoria.slice(1)}:\n`;
-      meuDeck[categoria].forEach(carta => {
-        mensagem += `- ${carta}\n`;
-      });
+        mensagem += `${categoria.charAt(0).toUpperCase() + categoria.slice(1)}:\n`;
+        meuDeck[categoria].forEach(carta => {
+            mensagem += `- ID: ${carta.id}, Nome: ${carta.nome}\n`;
+        });
     }
 
     alert(mensagem);
-  });
+});
+
 
   // Evento para abrir o modal quando "Meu Deck" é clicado
   const deckSection = document.querySelector('.deck-item');
