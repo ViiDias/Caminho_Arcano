@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const cardId = card.id;
         const cardName = card.getAttribute('name');  // Use getAttribute para acessar propriedades personalizadas
 
-        console.log(cardName);
         let categoria = null;
 
         if (card.parentElement.classList.contains('filosofia')) {
@@ -76,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           }
 
-          meuDeck[categoria].push(cardId);
+          meuDeck[categoria].push({ id: cardId, nome: cardName });
           atualizarContagem();
         }
       });
