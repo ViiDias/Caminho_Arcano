@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           }
 
-          meuDeck[categoria].push({ id: cardId, nome: cardName });
+          meuDeck[categoria].push(cardId);
           atualizarContagem();
         }
       });
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (const categoria in meuDeck) {
       mensagem += `${categoria.charAt(0).toUpperCase() + categoria.slice(1)}:\n`;
       meuDeck[categoria].forEach(carta => {
-        mensagem += `- ${carta}\n`;
+        mensagem += `- ID: ${carta.id}, Nome: ${carta.nome}\n`;
       });
     }
 
