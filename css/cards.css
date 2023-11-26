@@ -25,6 +25,9 @@
     padding: 10px;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .header {
