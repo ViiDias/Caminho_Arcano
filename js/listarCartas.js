@@ -1,34 +1,29 @@
-// Mapeamento dos nomes dos caminhos para imagens
-const caminhoToImage = {
-    "A Inexistência": "./img/caminhos/nihility.png",
-    "A Preservação": "./img/caminhos/preservation.png",
-    "A Caça": "./img/caminhos/hunt.png",
-    "A Erudição": "./img/caminhos/erudition.png",
-    "A Destruição": "./img/caminhos/destruction.png",
-    "A Abundância": "./img/caminhos/abundance.png",
-    "A Harmonia": "./img/caminhos/harmony.png"
-};
-
-async function loadCards(tipo, containerClass, dataFile) {
-    const response = await fetch(`./data/${dataFile}`);
+async function listCards(Categoria, containerClass) {
+    const response = await fetch(`./data/cartas.yaml`);
     const text = await response.text();
     const cardsData = jsyaml.load(text);
   
     const container = document.querySelector(`.${containerClass}`);
   
     cardsData.forEach((cardData) => {
+
+          // Verifica se o tipo da carta corresponde ao tipo desejado
+          if (cardData.Categoria !== Categoria) {
+            return;
+        }
+
         const cardHTML = document.createElement('div');
-        cardHTML.classList.add('card');
+        cardHTML.classList.add('cards');
         cardHTML.setAttribute('id', cardData.ID);
-        cardHTML.setAttribute('name', cardData.Nome);
-        
+        cardHTML.setAttribute('Categoria', cardData.Categoria);
+
         // Construa o caminho da imagem com base no ID da carta
         const imagePath = `./img/cards/card_${cardData.ID}.jpeg`;
         cardHTML.style.backgroundImage = `url(${imagePath})`;
 
         // Construa o caminho da imagem com base no ID da carta
         const caminhoImage = caminhoToImage[cardData.Caminho];
-  
+      
         cardHTML.innerHTML = `
         <div class="header">
             <div>
@@ -44,11 +39,11 @@ async function loadCards(tipo, containerClass, dataFile) {
   }
   
     // Chame a função para carregar as cartas de Filosofia
-    loadCards('Filosofia', 'filosofia', 'cartasFilo.yaml');
+    listCards('Filosofia', 'filosofia-cards');
 
     // Chame a função para carregar as cartas de Memória
-    loadCards('Memória', 'memoria', 'cartasMemo.yaml');
+    listCards('Memória', 'memoria-cards');
 
     // Chame a função para carregar as cartas de Memória
-    loadCards('Soberania', 'soberania', 'cartasSoberania.yaml');
+    listCards('Soberania', 'soberania-cards');
   
