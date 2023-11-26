@@ -10,7 +10,7 @@ navItems.forEach((item) => {
     const text = item.innerText;
     if (text === 'Página Inicial' && currentPage === '/Caminho_Arcano/index.html') {
         item.classList.add('active');
-    } else if (text === 'Cartas' && currentPage === '/Caminho_Arcano/cards.html') {
+    } else if (text === 'Cartas Arcanas' && currentPage === '/Caminho_Arcano/cards.html') {
         item.classList.add('active');
     } else if (text === 'Monte Seu Deck' && currentPage === '/Caminho_Arcano/deck.html') {
         item.classList.add('active');
