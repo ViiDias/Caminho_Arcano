@@ -54,10 +54,6 @@
     padding: 10px;
     background-size: cover; /* Ajusta a imagem para cobrir todo o espaço da carta */
     background-repeat: no-repeat; /* Impede a repetição da imagem */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .header{
