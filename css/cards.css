@@ -12,7 +12,7 @@
 .memoria,
 .soberania {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.4rem;
     justify-content: center;
     margin-bottom: 20px;
@@ -70,28 +70,49 @@
 
 /* Adaptação para tablets e telas menores */
 
-@media (max-width: 1024px) {
+@media (max-width: 1600px) {
     .filosofia,
     .memoria,
     .soberania {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
 }
 
 /* Adaptação para tablets pequenos */
 
-@media (max-width: 912px) {
+@media (max-width: 1400px) {
     .filosofia,
     .memoria,
     .soberania {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .card {
+        width: 266px;
+        height: 380px;
+        border-radius: 4px;
+        padding: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
 }
 
 /* Adaptação para dispositivos móveis */
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
+    .filosofia,
+    .memoria,
+    .soberania {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
     .filosofia,
     .memoria,
     .soberania {
@@ -99,7 +120,7 @@
     }
 
     .card {
-        width: 100%; /* Ocupar 100% da largura do container pai */
-        height: auto; /* Altura automática para manter a proporção */
+        width: 245px;
+        height: 350px;
     }
 }
