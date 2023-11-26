@@ -40,40 +40,46 @@ document.addEventListener('DOMContentLoaded', function() {
   atualizarContagem();
 
   // Função para adicionar o evento de clique a uma carta
-  function adicionarEventoClique(cartas) {
-    cartas.forEach(card => {
-      card.addEventListener('click', () => {
-        const cardId = card.id;
-        const cardName = card.getAttribute('name');  // Use getAttribute para acessar propriedades personalizadas
+function adicionarEventoClique(cartas) {
+  cartas.forEach(card => {
+    card.addEventListener('click', () => {
+      const cardId = card.id;
+      const cardName = card.getAttribute('name');
 
-        let categoria = null;
+      let categoria = null;
 
-        if (card.parentElement.classList.contains('filosofia')) {
-          categoria = 'filosofia';
-        } else if (card.parentElement.classList.contains('memoria')) {
-          categoria = 'memoria';
-        } else if (card.parentElement.classList.contains('soberania')) {
-          categoria = 'soberania';
+      if (card.parentElement.classList.contains('filosofia')) {
+        categoria = 'filosofia';
+      } else if (card.parentElement.classList.contains('memoria')) {
+        categoria = 'memoria';
+      } else if (card.parentElement.classList.contains('soberania')) {
+        categoria = 'soberania';
+      }
+
+      if (categoria) {
+        const categoriaDeck = meuDeck[categoria];
+        const numCartasComId = categoriaDeck.filter(carta => carta.id === cardId).length;
+
+        if (categoriaDeck.length >= getMaximoCartas(categoria)) {
+          alert(`Você atingiu o limite máximo de cartas de ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}.`);
+          return;
         }
 
-        if (categoria) {
-          if (meuDeck[categoria].length >= getMaximoCartas(categoria)) {
-            alert(`Você atingiu o limite máximo de cartas de ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}.`);
-            return;
-          }
+        if ((categoria === 'filosofia' || categoria === 'memoria') && numCartasComId >= 2) {
+          alert(`Você atingiu o limite de 2 cartas com o mesmo ID em ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}.`);
+          return;
+        } else if (categoria === 'soberania' && numCartasComId >= 1) {
+          alert(`Você já possui uma carta com o mesmo ID em Soberania.`);
+          return;
+        }
 
-          const numCartasComId = meuDeck[categoria].filter(id => id === cardId).length;
-          if (categoria === 'filosofia' || categoria === 'memoria') {
-            if (numCartasComId >= 2) {
-              alert(`Você atingiu o limite de 2 cartas com o mesmo ID em ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}.`);
-              return;
-            }
-          } else if (categoria === 'soberania') {
-            if (numCartasComId >= 1) {
-              alert(`Você já possui uma carta com o mesmo ID em Soberania.`);
-              return;
-            }
-          }
+        categoriaDeck.push({ id: cardId, nome: cardName });
+        atualizarContagem();
+      }
+    });
+  });
+}
+
 
           meuDeck[categoria].push({ id: cardId, nome: cardName });
           atualizarContagem();
